@@ -1,262 +1,266 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-05T13:57:20.470160" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-06-05T16:47:48.514951" rpa="false" schemaversion="5">
 <suite id="s1" name="Projeto robot" source="D:\Projeto_robot">
 <suite id="s1-s1" name="Test" source="D:\Projeto_robot\test">
 <suite id="s1-s1-s1" name="Login Steps" source="D:\Projeto_robot\test\login_steps.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2026-06-05T13:57:21.162159" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-06-05T16:47:49.182560" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:21.161421" elapsed="1.415497"/>
+<status status="PASS" start="2026-06-05T16:47:49.181322" elapsed="1.350325"/>
 </kw>
-<test id="s1-s1-s1-t1" name="Successful Login" line="11">
+<test id="s1-s1-s1-t1" name="Successful Login" line="7">
 <kw name="I navigate to the login page" owner="login_keyworks">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:22.598901" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
+<msg time="2026-06-05T16:47:50.558017" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL_DATA["baseUrl"]}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:22.597992" elapsed="0.152473"/>
+<status status="PASS" start="2026-06-05T16:47:50.556211" elapsed="0.794459"/>
 </kw>
-<arg>${URL}</arg>
-<status status="PASS" start="2026-06-05T13:57:22.596422" elapsed="0.154800"/>
+<status status="PASS" start="2026-06-05T16:47:50.553203" elapsed="0.798092"/>
 </kw>
 <kw name="I input correct credentials" owner="login_keyworks">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=user-name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-05T13:57:22.763905" elapsed="0.558529"/>
+<status status="PASS" start="2026-06-05T16:47:51.353456" elapsed="0.064544"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:23.324692" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-06-05T16:47:51.420091" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${LOGIN_DATA["correctData"]["username"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:23.323132" elapsed="0.240315"/>
+<status status="PASS" start="2026-06-05T16:47:51.418650" elapsed="0.244578"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:23.564839" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2026-06-05T16:47:51.665248" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${LOGIN_DATA["correctData"]["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:23.563875" elapsed="0.163368"/>
+<status status="PASS" start="2026-06-05T16:47:51.663865" elapsed="0.159722"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:22.761746" elapsed="0.966026"/>
+<status status="PASS" start="2026-06-05T16:47:51.352259" elapsed="0.471854"/>
 </kw>
 <kw name="I click on the login button" owner="login_keyworks">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:23.729926" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-05T16:47:51.826082" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:23.729219" elapsed="0.217382"/>
+<status status="PASS" start="2026-06-05T16:47:51.825580" elapsed="0.228636"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:23.728354" elapsed="0.218758"/>
+<status status="PASS" start="2026-06-05T16:47:51.824882" elapsed="0.230586"/>
 </kw>
 <kw name="I am able view the home page" owner="login_keyworks">
 <kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:23.975063" level="INFO">${location} = https://www.saucedemo.com/inventory.html</msg>
+<msg time="2026-06-05T16:47:52.106375" level="INFO">${location} = https://www.saucedemo.com/inventory.html</msg>
 <var>${location}</var>
 <doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2026-06-05T13:57:23.963249" elapsed="0.012364"/>
+<status status="PASS" start="2026-06-05T16:47:52.057924" elapsed="0.049055"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2026-06-05T16:47:52.111348" level="INFO">${full_url} = https://www.saucedemo.com/inventory.html</msg>
+<var>${full_url}</var>
+<arg>SEPARATOR=</arg>
+<arg>${URL_DATA["baseUrl"]}</arg>
+<arg>${URL_DATA["inventoryUrl"]}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2026-06-05T16:47:52.107894" elapsed="0.004206"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${location}</arg>
-<arg>https://www.saucedemo.com/inventory.html</arg>
+<arg>${full_url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-06-05T13:57:23.976137" elapsed="0.001631"/>
+<status status="PASS" start="2026-06-05T16:47:52.112763" elapsed="0.001978"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:23.961522" elapsed="0.016811"/>
+<status status="PASS" start="2026-06-05T16:47:52.056342" elapsed="0.058861"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:22.577995" elapsed="1.402275"/>
+<status status="PASS" start="2026-06-05T16:47:50.532283" elapsed="1.586968"/>
 </test>
-<test id="s1-s1-s1-t2" name="unSuccessful Login - No Credentials" line="17">
+<test id="s1-s1-s1-t2" name="unSuccessful Login - No Credentials" line="13">
 <kw name="I navigate to the login page" owner="login_keyworks">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:24.051124" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
+<msg time="2026-06-05T16:47:52.160573" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL_DATA["baseUrl"]}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.050199" elapsed="0.145829"/>
+<status status="PASS" start="2026-06-05T16:47:52.159295" elapsed="0.160074"/>
 </kw>
-<arg>${URL}</arg>
-<status status="PASS" start="2026-06-05T13:57:24.046268" elapsed="0.150078"/>
+<status status="PASS" start="2026-06-05T16:47:52.158202" elapsed="0.161502"/>
 </kw>
 <kw name="I input no credentials" owner="login_keyworks">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=user-name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.199879" elapsed="0.024637"/>
+<status status="PASS" start="2026-06-05T16:47:52.323112" elapsed="0.023624"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.197358" elapsed="0.027514"/>
+<status status="PASS" start="2026-06-05T16:47:52.320834" elapsed="0.026209"/>
 </kw>
 <kw name="I click on the login button" owner="login_keyworks">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:24.226739" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-05T16:47:52.349080" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.226218" elapsed="0.114018"/>
+<status status="PASS" start="2026-06-05T16:47:52.348553" elapsed="0.112519"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.225492" elapsed="0.115477"/>
+<status status="PASS" start="2026-06-05T16:47:52.347644" elapsed="0.113988"/>
 </kw>
 <kw name="I am able see the expected error message for no credentials" owner="login_keyworks">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=error-message-container</arg>
 <arg>${ERROR_MESSAGES["noCredentials"]}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.342715" elapsed="0.048998"/>
+<status status="PASS" start="2026-06-05T16:47:52.463496" elapsed="0.041735"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.341576" elapsed="0.050469"/>
+<status status="PASS" start="2026-06-05T16:47:52.462421" elapsed="0.043159"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.018128" elapsed="0.374407"/>
+<status status="PASS" start="2026-06-05T16:47:52.140283" elapsed="0.365962"/>
 </test>
-<test id="s1-s1-s1-t3" name="unSuccessful Login - No UserName" line="23">
+<test id="s1-s1-s1-t3" name="unSuccessful Login - No UserName" line="19">
 <kw name="I navigate to the login page" owner="login_keyworks">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:24.419082" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
+<msg time="2026-06-05T16:47:52.522425" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL_DATA["baseUrl"]}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.418296" elapsed="0.085213"/>
+<status status="PASS" start="2026-06-05T16:47:52.521441" elapsed="0.095607"/>
 </kw>
-<arg>${URL}</arg>
-<status status="PASS" start="2026-06-05T13:57:24.417142" elapsed="0.086896"/>
+<status status="PASS" start="2026-06-05T16:47:52.519819" elapsed="0.097727"/>
 </kw>
 <kw name="I input only the password" owner="login_keyworks">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=user-name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.510200" elapsed="0.023233"/>
+<status status="PASS" start="2026-06-05T16:47:52.619231" elapsed="0.025570"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:24.535159" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2026-06-05T16:47:52.646145" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${LOGIN_DATA["correctData"]["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.533868" elapsed="0.151507"/>
+<status status="PASS" start="2026-06-05T16:47:52.645207" elapsed="0.136325"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.508931" elapsed="0.177040"/>
+<status status="PASS" start="2026-06-05T16:47:52.618439" elapsed="0.163407"/>
 </kw>
 <kw name="I click on the login button" owner="login_keyworks">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:24.688511" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-05T16:47:52.783616" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.687927" elapsed="0.127500"/>
+<status status="PASS" start="2026-06-05T16:47:52.783114" elapsed="0.097242"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.686803" elapsed="0.128950"/>
+<status status="PASS" start="2026-06-05T16:47:52.782383" elapsed="0.098397"/>
 </kw>
 <kw name="I am able see the expected error message for no username" owner="login_keyworks">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=error-message-container</arg>
 <arg>${ERROR_MESSAGES["noUsername"]}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2026-06-05T13:57:24.817189" elapsed="1.956412"/>
+<status status="PASS" start="2026-06-05T16:47:52.882515" elapsed="0.027750"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.816401" elapsed="1.957714"/>
+<status status="PASS" start="2026-06-05T16:47:52.881442" elapsed="0.029201"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:24.399217" elapsed="2.375596"/>
+<status status="PASS" start="2026-06-05T16:47:52.512836" elapsed="0.398351"/>
 </test>
-<test id="s1-s1-s1-t4" name="unSuccessful Login - no Password" line="29">
+<test id="s1-s1-s1-t4" name="unSuccessful Login - no Password" line="25">
 <kw name="I navigate to the login page" owner="login_keyworks">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:26.827605" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
+<msg time="2026-06-05T16:47:52.930892" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL_DATA["baseUrl"]}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:26.827117" elapsed="0.141781"/>
+<status status="PASS" start="2026-06-05T16:47:52.929982" elapsed="0.147017"/>
 </kw>
-<arg>${URL}</arg>
-<status status="PASS" start="2026-06-05T13:57:26.825573" elapsed="0.145884"/>
+<status status="PASS" start="2026-06-05T16:47:52.928884" elapsed="0.148651"/>
 </kw>
 <kw name="I input only the username" owner="login_keyworks">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=user-name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-05T13:57:26.977490" elapsed="0.200122"/>
+<status status="PASS" start="2026-06-05T16:47:53.115487" elapsed="0.100517"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:27.179547" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-06-05T16:47:53.217473" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${LOGIN_DATA["correctData"]["username"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.178225" elapsed="0.350807"/>
+<status status="PASS" start="2026-06-05T16:47:53.216390" elapsed="0.147733"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:26.976394" elapsed="0.553141"/>
+<status status="PASS" start="2026-06-05T16:47:53.114339" elapsed="0.250321"/>
 </kw>
 <kw name="I click on the login button" owner="login_keyworks">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:27.532215" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-05T16:47:53.366518" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.531355" elapsed="0.132866"/>
+<status status="PASS" start="2026-06-05T16:47:53.366019" elapsed="0.097188"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:27.530288" elapsed="0.134559"/>
+<status status="PASS" start="2026-06-05T16:47:53.365253" elapsed="0.098287"/>
 </kw>
 <kw name="I am able see the expected error message for no password" owner="login_keyworks">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=error-message-container</arg>
 <arg>${ERROR_MESSAGES["noPassword"]}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.666797" elapsed="0.033403"/>
+<status status="PASS" start="2026-06-05T16:47:53.465425" elapsed="0.024029"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:27.665555" elapsed="0.034972"/>
+<status status="PASS" start="2026-06-05T16:47:53.464195" elapsed="0.025736"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:26.790636" elapsed="0.910458"/>
+<status status="PASS" start="2026-06-05T16:47:52.919722" elapsed="0.570855"/>
 </test>
-<test id="s1-s1-s1-t5" name="unSuccessful Login - Wrong Credentials" line="35">
+<test id="s1-s1-s1-t5" name="unSuccessful Login - Wrong Credentials" line="31">
 <kw name="I navigate to the login page" owner="login_keyworks">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:27.722155" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<arg>${URL}</arg>
+<msg time="2026-06-05T16:47:53.516288" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>${URL_DATA["baseUrl"]}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.721329" elapsed="0.125922"/>
+<status status="PASS" start="2026-06-05T16:47:53.515449" elapsed="0.079649"/>
 </kw>
-<arg>${URL}</arg>
-<status status="PASS" start="2026-06-05T13:57:27.720069" elapsed="0.127710"/>
+<status status="PASS" start="2026-06-05T16:47:53.514409" elapsed="0.081329"/>
 </kw>
 <kw name="I input wrong credentials" owner="login_keyworks">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=user-name</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.849650" elapsed="0.031273"/>
+<status status="PASS" start="2026-06-05T16:47:53.598887" elapsed="0.026787"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:27.882205" level="INFO">Typing text 'cristian' into text field 'id=user-name'.</msg>
+<msg time="2026-06-05T16:47:53.627163" level="INFO">Typing text 'cristian' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>${LOGIN_DATA["WrongData"]["username"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:27.881307" elapsed="0.167443"/>
+<status status="PASS" start="2026-06-05T16:47:53.626070" elapsed="0.116315"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:28.050159" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<msg time="2026-06-05T16:47:53.743961" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${LOGIN_DATA["WrongData"]["password"]}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:28.049189" elapsed="0.121404"/>
+<status status="PASS" start="2026-06-05T16:47:53.742932" elapsed="0.109459"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:27.848645" elapsed="0.322269"/>
+<status status="PASS" start="2026-06-05T16:47:53.597685" elapsed="0.255209"/>
 </kw>
 <kw name="I click on the login button" owner="login_keyworks">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-06-05T13:57:28.173347" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2026-06-05T16:47:53.857034" level="INFO">Clicking button 'id=login-button'.</msg>
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-05T13:57:28.172569" elapsed="0.120248"/>
+<status status="PASS" start="2026-06-05T16:47:53.856221" elapsed="0.111992"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:28.171570" elapsed="0.121743"/>
+<status status="PASS" start="2026-06-05T16:47:53.855175" elapsed="0.113389"/>
 </kw>
 <kw name="I am able see the expected error message for wrong credentials" owner="login_keyworks">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=error-message-container</arg>
 <arg>${ERROR_MESSAGES["wrongCredentials"]}</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2026-06-05T13:57:28.295103" elapsed="0.032134"/>
+<status status="PASS" start="2026-06-05T16:47:53.970564" elapsed="0.026283"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:28.293982" elapsed="0.033904"/>
+<status status="PASS" start="2026-06-05T16:47:53.969207" elapsed="0.028002"/>
 </kw>
-<status status="PASS" start="2026-06-05T13:57:27.711664" elapsed="0.616822"/>
+<status status="PASS" start="2026-06-05T16:47:53.501432" elapsed="0.496434"/>
 </test>
-<status status="PASS" start="2026-06-05T13:57:20.586068" elapsed="7.755720"/>
+<status status="PASS" start="2026-06-05T16:47:48.633145" elapsed="5.375195"/>
 </suite>
-<status status="PASS" start="2026-06-05T13:57:20.571719" elapsed="7.777360"/>
+<status status="PASS" start="2026-06-05T16:47:48.623729" elapsed="5.392478"/>
 </suite>
-<status status="PASS" start="2026-06-05T13:57:20.481237" elapsed="7.885593"/>
+<status status="PASS" start="2026-06-05T16:47:48.528928" elapsed="5.495488"/>
 </suite>
 <statistics>
 <total>
