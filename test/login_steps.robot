@@ -1,18 +1,16 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../resources/login_keyworks.resource
-Test Setup    Open Browser   browser=${BROWSER}
+Suite Setup    Open Browser   browser=chrome
 
 *** Variables ***
 ${URL}    https://www.saucedemo.com/
-${BROWSER}    Chrome   
-${USERNAME}    standard_user
-${PASSWORD}    secret_sauce
+
 
 *** Test Cases ***
 Successful Login
         I navigate to the login page    ${URL}
-        I input correct credentials    ${USERNAME}    ${PASSWORD}
+        I input correct credentials   
         I click on the login button
         I am able view the home page
 
@@ -20,25 +18,25 @@ unSuccessful Login - No Credentials
         I navigate to the login page    ${URL}
         I input no credentials
         I click on the login button
-        I am able see the expected error message      Epic sadface: Username is required
+        I am able see the expected error message for no credentials    
 
 unSuccessful Login - No UserName
         I navigate to the login page    ${URL}
-        I input only the password     ${PASSWORD}
+        I input only the password  
         I click on the login button
-        I am able see the expected error message     Epic sadface: Username is required
+        I am able see the expected error message for no username
 
 unSuccessful Login - no Password
         I navigate to the login page    ${URL}
-        I input only the username     ${USERNAME}
+        I input only the username     
         I click on the login button
-        I am able see the expected error message      Epic sadface: Password is required
+        I am able see the expected error message for no password         
      
 unSuccessful Login - Wrong Credentials
         I navigate to the login page    ${URL}
-        I input wrong credentials       cristian    1234
+        I input wrong credentials       
         I click on the login button
-        I am able see the expected error message     Epic sadface: Username and password do not match any user in this service
+        I am able see the expected error message for wrong credentials     
 
 
 
